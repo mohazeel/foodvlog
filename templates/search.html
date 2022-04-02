@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>Nocobot</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'hm/layout/styles/layout.css'%}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<main class="hoc container clear">
+    <section id="introblocks">
+      <ul class="nospace group btmspace-80">
+        {% for i in pr %}
+        <li class="one_third">
+          <figure><a class="imgover" href="{{i.get_url}}"><img src="{{ i.img.url}}" alt="" style="height:400,width:700"></a>
+
+              <h6 class="heading">{{i.name}}</h6>
+
+          </figure>
+        </li>
+        {% endfor %}
+
+      </ul>
+    </section>
+    <hr class="btmspace-80">
+</div>
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="{% static 'hm/layout/scripts/jquery.min.js'%}"></script>
+<script src="{% static 'hm/layout/scripts/jquery.backtotop.js'%}"></script>
+<script src="{% static 'hm/layout/scripts/jquery.mobilemenu.js'%}"></script>
+</body>
+</html>
+{% endblock %}

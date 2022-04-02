@@ -1,0 +1,39 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="">
+<head>
+<title>MO SHOPPING</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'hm/layout/styles/layout.css'%}" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+    <div class="fl_left">
+      <ul class="nospace">>
+      </ul>
+      <!-- ################################################################################################ -->
+    </div>
+<div class="bgded" style="background-image:url({%static 'hm/images/demo/backgrounds/fud.jpg'%});">
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left">
+        <h1><a href="/">MO SHOPPING</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a class="active" href="{% url 'cartDetails' %}">cart</a>
+              <li><a class="active" href="/">log out</a>
+            <li><a class="active" href="{% url 'login' %}">log in</a>
+            <li><a class="active" href="{% url 'account' %}">Register</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </div>
+    </div>
+{% block content %}
+{% endblock %}
+</body>
+</html>
